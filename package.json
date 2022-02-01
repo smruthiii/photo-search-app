@@ -1,0 +1,26 @@
+{
+  "name": "photo-search-app",
+  "version": "1.0.0",
+  "description": "A simple app that uses Pexels API to find images",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smruthiii/photo-search-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smruthiii/photo-search-app/issues"
+  },
+  "homepage": "https://github.com/smruthiii/photo-search-app#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "express": "^4.17.2",
+    "pexels": "^1.3.0"
+  }
+}
