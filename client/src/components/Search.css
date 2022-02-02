@@ -1,0 +1,10 @@
+.form {
+  display: inline-block !important;
+  margin-bottom: 1vh !important;
+  width: 100% !important;
+}
+
+.width {
+  display: inline-block !important;
+  width: 80% !important;
+}
