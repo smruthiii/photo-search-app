@@ -17,15 +17,33 @@ function App() {
 
   useEffect(() => {
     setLoading(true)
-    // apiResponse()
-    
-    getPics()
+    if (!window.localStorage.getItem('photos')) {
+      getPics()
+    } else {
+      console.log(window.localStorage)
+      setPhotos(JSON.parse(window.localStorage.getItem('photos')));
+    }
+    // }
+    // getPics()
     setLoading(false)
   }, []);
+
+  // useEffect(() => {
+  //   console.log(photos)
+  //   console.log(window.localStorage.photos)
+  //   window.localStorage.setItem('photos', photos);
+  // }, [photos]);
+
 
   const getPics = (pageNum = 0) => {
     fetch(`/curatedPics?page=${pageNum > 0 ? pageNum : pageNumber}&per_page=10`).then(res => res.json()).then((data) => {
       setPhotos(data.photos)
+      console.log(window.localStorage)
+      console.log(window.localStorage.photos)
+      console.log(window.localStorage.getItem('photos'))
+      console.log(JSON.stringify(data.photos))
+      window.localStorage.setItem('photos', JSON.stringify(data.photos))
+      console.log(JSON.parse(window.localStorage.getItem('photos')))
       setSearchString('')
       window.scrollTo(0, 0)
     })
@@ -35,6 +53,7 @@ function App() {
     fetch(`/searchPics?page=${pageNum > 0 ? pageNum : pageNumber}&searchString=${searchString}`).then(res => res.json()).then((data) => {
       setPageNumber(pageNum)
       setPhotos(data.photos)
+      window.localStorage.setItem('photos', JSON.stringify(data.photos))
       window.scrollTo(0, 0)
       console.log(data)
     }).catch(e => 
@@ -118,7 +137,7 @@ function App() {
        {loading ? <Spinner animation='border' role='status' size="lg"/> : (
          <>
          <Search updateSearchString={updateSearchString} /> 
-         {photos ? (<PhotoViewer photos={photos}/>) : null}
+         {photos ? (<PhotoViewer photos={photos}/>) : <PhotoViewer photos={null}/>}
          <Pagination>
            <Pagination.First disabled={pageNumber===1} onClick={() => changePageNumber('first')}/>
            <Pagination.Prev disabled={pageNumber===1}onClick={() => changePageNumber('prev')}/>

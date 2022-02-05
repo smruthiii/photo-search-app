@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Form,Button,Row,Col } from 'react-bootstrap'
 
 import styles from './Search.css'
@@ -6,6 +6,15 @@ import styles from './Search.css'
 const Search = ({ updateSearchString }) => {
     const [searchText, setSearchText] = useState('')
 
+    useEffect(() => {
+        if (!searchText) 
+        {
+            if (window.localStorage.getItem('searchText')) {
+                setSearchText(window.localStorage.getItem('searchText'))}
+        }
+        
+        
+      }, []);
     
 
     
@@ -20,6 +29,7 @@ const Search = ({ updateSearchString }) => {
                         //prevent automatic reload on form submission 
                         e.preventDefault()
                         updateSearchString(searchText)
+                        window.localStorage.setItem('searchText',searchText)
                         }}>Submit</Button></Col>
             </Row>
             

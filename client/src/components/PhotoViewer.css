@@ -12,6 +12,11 @@
   width: 20%;
   float: left;
 }
+
+.card {
+  margin: 10px;
+}
+
 @media (min-width: 768px) {
   .col-sm-15 {
     width: 20%;
