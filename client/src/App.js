@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import logo from './logo.svg';
 import './App.css';
-import './components/PhotoViewer'
+import './components/PhotoViewer/PhotoViewer'
 import PhotoViewer from './components/PhotoViewer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Pagination from 'react-bootstrap/Pagination'
 import Spinner from 'react-bootstrap/Spinner'
-import Search from './components/Search'
+import Search from './components/Search/Search'
 
 function App() {
   const [data, setData] = useState(null)
