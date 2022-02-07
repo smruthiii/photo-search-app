@@ -55,37 +55,31 @@ function App() {
       console.log(e.message)
     )
   }
-
-  const apiResponse = () => {
-    fetch("/api")
-    .then((res) => res.json())
-    .then((data) => {
-      setData(data.message)});
-  }
   
 
   const changePageNumber = (changeType) => {
     switch (changeType) {
       case ('next'): 
       if (pageNumber < 80){
-      setPageNumber(pageNumber+1)
       window.localStorage.setItem('pageNumber',pageNumber+1)
       if (searchString !== '') {
         search(searchString, pageNumber+1)
+        setPageNumber(pageNumber+1)
       } else {
         getPics(pageNumber+1)
+        setPageNumber(pageNumber+1)
       }}
       break;
       case('prev'):
       if (pageNumber > 1){
-      setPageNumber(pageNumber-1)
       window.localStorage.setItem('pageNumber',pageNumber-1)
       if (searchString !== '') {
         search(searchString, pageNumber-1) 
+        setPageNumber(pageNumber-1)
       } else {
         getPics(pageNumber-1)
+        setPageNumber(pageNumber-1)
       }
-      getPics(pageNumber-1)
     }
     break;
     case('last'): 
@@ -128,7 +122,7 @@ function App() {
        {loading ? <Spinner animation='border' role='status' size="lg"/> : (
          <>
          <Search updateSearchString={updateSearchString} /> 
-         {photos ? (<PhotoViewer photos={photos}/>) : <PhotoViewer photos={null}/>}
+         {photos ? (<PhotoViewer  data-testid='photoviewer' photos={photos}/>) : <PhotoViewer data-testid='photoviewer' photos={null}/>}
          <Pagination>
            <Pagination.First disabled={pageNumber===1} onClick={() => changePageNumber('first')}/>
            <Pagination.Prev disabled={pageNumber===1}onClick={() => changePageNumber('prev')}/>
