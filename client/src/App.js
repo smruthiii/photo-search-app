@@ -106,7 +106,6 @@ function App() {
     } else {
       getPics(1)
     }
-    
     break;
     }
     
