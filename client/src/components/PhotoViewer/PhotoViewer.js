@@ -15,7 +15,7 @@ const PhotoViewer = ({ photos }) => {
                 <Card className={styles.card}>
                     <Card.Img variant='top' src={photo.src.tiny} />
                     <Card.Title>{photo.photographer}</Card.Title>
-                    <Card.Link href={photo.src.original}>Visit original photo</Card.Link>
+                    <Card.Link href={photo.src.original} target="_blank">Visit original photo</Card.Link>
                 </Card>
                 </Col>
             )

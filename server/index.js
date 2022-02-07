@@ -2,8 +2,6 @@ const { createClient } = require('pexels')
 const express = require("express");
 const PORT = process.env.PORT || 3001;
 const APIKEY = process.env.APIKEY;
-console.log(APIKEY)
-
 const app = express();
 const client = createClient(APIKEY)
 
