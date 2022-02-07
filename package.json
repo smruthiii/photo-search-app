@@ -4,7 +4,7 @@
   "description": "A simple app that uses Pexels API to find images",
   "main": "index.js",
   "scripts": {
-    "start": "node server/index.js",
+    "start": "node server/index.js $APIKEY",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

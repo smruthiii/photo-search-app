@@ -1,0 +1,156 @@
+{
+  "config": {
+    "title": "Client",
+    "description": "My awesome app using docz",
+    "menu": [],
+    "version": "0.1.0",
+    "repository": null,
+    "native": false,
+    "themeConfig": {},
+    "separator": "-"
+  },
+  "entries": [
+    {
+      "key": "README.md",
+      "value": {
+        "id": "04c6e90faac2675aa89e2176d2eec7d8",
+        "filepath": "README.md",
+        "fullpath": "/Users/smruthi/workspace/photo-search-app/client/README.md",
+        "link": "",
+        "hidden": false,
+        "slug": "readme",
+        "route": "/readme",
+        "name": "Readme",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "getting-started-with-create-react-app",
+            "depth": 1,
+            "value": "Getting Started with Create React App"
+          },
+          {
+            "slug": "available-scripts",
+            "depth": 2,
+            "value": "Available Scripts"
+          },
+          {
+            "slug": "npm-start",
+            "depth": 3,
+            "value": "npm start"
+          },
+          {
+            "slug": "npm-test",
+            "depth": 3,
+            "value": "npm test"
+          },
+          {
+            "slug": "npm-run-build",
+            "depth": 3,
+            "value": "npm run build"
+          },
+          {
+            "slug": "npm-run-eject",
+            "depth": 3,
+            "value": "npm run eject"
+          },
+          {
+            "slug": "learn-more",
+            "depth": 2,
+            "value": "Learn More"
+          },
+          {
+            "slug": "code-splitting",
+            "depth": 3,
+            "value": "Code Splitting"
+          },
+          {
+            "slug": "analyzing-the-bundle-size",
+            "depth": 3,
+            "value": "Analyzing the Bundle Size"
+          },
+          {
+            "slug": "making-a-progressive-web-app",
+            "depth": 3,
+            "value": "Making a Progressive Web App"
+          },
+          {
+            "slug": "advanced-configuration",
+            "depth": 3,
+            "value": "Advanced Configuration"
+          },
+          {
+            "slug": "deployment",
+            "depth": 3,
+            "value": "Deployment"
+          },
+          {
+            "slug": "npm-run-build-fails-to-minify",
+            "depth": 3,
+            "value": "npm run build  fails to minify"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/components/PhotoViewer/PhotoViewer.mdx",
+      "value": {
+        "name": "PhotoViewer",
+        "route": "/",
+        "id": "5f1f2ce03794360796136c615c4a3ff6",
+        "filepath": "src/components/PhotoViewer/PhotoViewer.mdx",
+        "fullpath": "/Users/smruthi/workspace/photo-search-app/client/src/components/PhotoViewer/PhotoViewer.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "src-components-photo-viewer-photo-viewer",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "button",
+            "depth": 1,
+            "value": "Button"
+          },
+          {
+            "slug": "basic-usage",
+            "depth": 2,
+            "value": "Basic usage"
+          }
+        ]
+      }
+    }
+  ],
+  "props": [
+    {
+      "key": "src/App.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "App",
+          "methods": [],
+          "actualName": "App"
+        }
+      ]
+    },
+    {
+      "key": "src/components/PhotoViewer/PhotoViewer.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "PhotoViewer",
+          "methods": [],
+          "actualName": "PhotoViewer"
+        }
+      ]
+    },
+    {
+      "key": "src/components/Search/Search.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Search",
+          "methods": [],
+          "actualName": "Search"
+        }
+      ]
+    }
+  ]
+}
