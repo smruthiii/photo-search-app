@@ -15,4 +15,7 @@ To run the app in client, navigate to the client directory and run:
 
 ### 'npm run start'
 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
 The client will proxy the requests to the server and the server will be making requests to the Pexels APIs.
